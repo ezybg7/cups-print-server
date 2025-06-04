@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone='no'?>
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+<service-group>
+  <name replace-wildcards="yes">AirPrint %h</name>
+  <service>
+    <type>_ipp._tcp</type>
+    <subtype>_universal._sub._ipp._tcp</subtype>
+    <port>631</port>
+    <txt-record>txtvers=1</txt-record>
+    <txt-record>qtotal=1</txt-record>
+    <txt-record>rp=printers/AirPrint</txt-record>
+    <txt-record>ty=AirPrint Printer</txt-record>
+    <txt-record>note=AutoShared</txt-record>
+    <txt-record>product=(GPL Ghostscript)</txt-record>
+    <txt-record>pdl=application/postscript</txt-record>
+    <txt-record>URF=none</txt-record>
+  </service>
+</service-group>

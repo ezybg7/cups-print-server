@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  cups:
+    build: .
+    container_name: cups-print-server
+    hostname: cups-server
+    network_mode: host
+    restart: unless-stopped
+    privileged: true
+    environment:
+      - CUPS_USER_ADMIN=<CUPS_ADMIN_USERNAME>
+      - CUPS_USER_PASSWORD=<CUPS_ADMIN_PASSWORD>
+    volumes:
+      - cups_etc:/etc/cups
+      - cups_var:/var/lib/cups
+      - cups_log:/var/log/cups
+      - cups_spool:/var/spool/cups
+      - /dev/bus/usb:/dev/bus/usb
+    devices:
+      - /dev/bus/usb
+
+volumes:
+  cups_etc:
+    driver: local
+  cups_var:
+    driver: local
+  cups_log:
+    driver: local
+  cups_spool:
+    driver: local
