@@ -1,6 +1,6 @@
 # 🖨️ CUPS Print Server Docker
 
-A containerized CUPS (Common UNIX Printing System) print server that runs locally, providing a robust printing solution with AirPrint support. This setup is designed for local network use but can be modified for other environments.
+A containerized CUPS (Common UNIX Printing System) print server that runs locally, support AirPrint and Android. This setup is designed for local network use but can be modified for other environments.
 
 ## 🌟 Features
 
